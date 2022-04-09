@@ -5,17 +5,17 @@ import { showMessage } from "./status"
 import { IResponse, ILogin } from "./type";
 let axiosInstance: AxiosInstance = axios.create({
     baseURL: "http://localhost:8080",
-    headers: {
-        Accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded"
-    },
-    transformRequest: [
-        function (data) {
-            delete data.Authorization;
-            data = qs.stringify(data);
-            return data;
-        }
-    ]
+    // headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/x-www-form-urlencoded"
+    // },
+    // transformRequest: [
+    //     function (data) {
+    //         delete data.Authorization;
+    //         data = qs.stringify(data);
+    //         return data;
+    //     }
+    // ]
 })
 //axios 实例拦截响应
 axiosInstance.interceptors.response.use(
@@ -55,6 +55,6 @@ axiosInstance.interceptors.request.use(
         return Promise.reject(error);
     }
 );
-export const login = (parmas: ILogin): Promise<IResponse> => {
-    return axiosInstance.post('user/login', parmas).then(res => res.data);//参数里面是url地址
+export const userlogin = (userName: String, userPassword: String) => {
+    return axiosInstance.post('/userlogin', qs.stringify({ userName, userPassword })).then(res => res.data);//参数里面是url地址
 }
