@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import { ElMessage } from "element-plus";
 import qs from 'qs'
 import { showMessage } from "./status"
-import { IResponse, ILogin } from "./type";
+
 let axiosInstance: AxiosInstance = axios.create({
     baseURL: "http://localhost:8080",
     // headers: {
