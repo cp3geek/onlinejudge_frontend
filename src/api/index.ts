@@ -56,5 +56,5 @@ axiosInstance.interceptors.request.use(
     }
 );
 export const userlogin = (userName: String, userPassword: String) => {
-    return axiosInstance.post('/userlogin', qs.stringify({ userName, userPassword })).then(res => res.data);//参数里面是url地址
+    return axiosInstance.post('/login', qs.stringify({ userName, userPassword }))//参数里面是url地址
 }
