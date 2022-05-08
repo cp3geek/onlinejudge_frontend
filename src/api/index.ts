@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-
+import { useMessage } from 'naive-ui'
 import qs from 'qs'
 import { showMessage } from "./status"
 
@@ -42,6 +42,8 @@ axiosInstance.interceptors.response.use(
             return Promise.reject(response.data);
         } else {
             // ElMessage.warning("网络连接异常，请稍后再试！");
+            const m = useMessage();
+            m.error("网络连接异常，请稍后再试！")
         }
     }
 );
