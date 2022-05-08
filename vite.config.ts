@@ -12,8 +12,13 @@ export default defineConfig({
   },
   base: './',
   server: {
+    watch: {
+      usePolling: true
+    },
+    hmr: true,
     port: 3000,
     open: true,
-    cors: true
+    cors: true,
+
   }
 })
