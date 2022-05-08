@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import { ElMessage } from "element-plus";
+
 import qs from 'qs'
 import { showMessage } from "./status"
 
@@ -41,7 +41,7 @@ axiosInstance.interceptors.response.use(
             showMessage(response.status);
             return Promise.reject(response.data);
         } else {
-            ElMessage.warning("网络连接异常，请稍后再试！");
+            // ElMessage.warning("网络连接异常，请稍后再试！");
         }
     }
 );
