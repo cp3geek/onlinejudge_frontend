@@ -15,7 +15,12 @@ import {
     NBreadcrumbItem,
     NAvatar,
     NSpace,
-    NDropdown
+    NDropdown,
+    NLayout,
+    NLayoutHeader,
+    NLayoutContent,
+    NLayoutFooter,
+    NLayoutSider,
 } from 'naive-ui'
 
 const naive = create({
@@ -33,7 +38,12 @@ const naive = create({
         NBreadcrumbItem,
         NAvatar,
         NSpace,
-        NDropdown
+        NDropdown,
+        NLayout,
+        NLayoutHeader,
+        NLayoutContent,
+        NLayoutFooter,
+        NLayoutSider,
     ],
 })
 
