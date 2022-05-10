@@ -7,6 +7,15 @@ import {
     NButton,
     NIcon,
     NMenu,
+    NPageHeader,
+    NGi,
+    NStatistic,
+    NGrid,
+    NBreadcrumb,
+    NBreadcrumbItem,
+    NAvatar,
+    NSpace,
+    NDropdown
 } from 'naive-ui'
 
 const naive = create({
@@ -15,7 +24,16 @@ const naive = create({
         NMessageProvider,
         NButton,
         NIcon,
-        NMenu
+        NMenu,
+        NPageHeader,
+        NGi,
+        NStatistic,
+        NGrid,
+        NBreadcrumb,
+        NBreadcrumbItem,
+        NAvatar,
+        NSpace,
+        NDropdown
     ],
 })
 
